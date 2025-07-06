@@ -1,7 +1,7 @@
 ## Hi there 👋
 
-<h1 align="center">Hi 👋, I'm Umang</h1>
-<h3 align="center">A passionate Software Engineer and Future Techpreneur 🚀</h3>
+<h1 align="center">Hi , I'm Umang</h1>
+<h3 align="center">A passionate Software Engineer and Citizen Scientist 🚀</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=First-gen+Engineer+%F0%9F%94%A5;Building+tech+to+uplift+my+roots;Loves+AI%2C+space+%26+open-source+tools;Always+learning+%F0%9F%93%9A+and+sharing+%F0%9F%92%AB" alt="Typing SVG" />
@@ -66,7 +66,7 @@
 
 > *“When you have no legacy to inherit, you create one.”*
 
-Initial commit - Added profile README
+
 
 
 
