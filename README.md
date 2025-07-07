@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/UMANG-SH941/YourGitHubUsername/blob/main/header_.png" alt="banner" />
+</p>
+
 ## Hi there 👋
 
 <h1 align="center">Hi , I'm Umang</h1>
