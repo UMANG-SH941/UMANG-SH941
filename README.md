@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://github.com/UMANG-SH941/YourGitHubUsername/blob/main/header_.png alt="banner" />
+  <img src="https://github.com/UMANG-SH941/UMANG-SH941/blob/main/header_.png" alt="banner" />
 </p>
+
 
 ## Hi there 👋
 
