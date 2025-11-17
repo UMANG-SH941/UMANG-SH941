@@ -15,7 +15,7 @@
 ---
 
 ### 🧑‍💻 About Me
-- 🌱 I’m currently learning **AI/ML-powered web development**
+- 🌱 I’m currently learning **AI/ML-powered web3 and Simulation**
 - 🎯 Goal: Build tools that help people grow, like I did 💡
 - 🚀 I’m working on **space data projects & automation tools**
 - 💬 Ask me about **Python, C++, Git, Web Dev, and simulations**
