@@ -1,0 +1,87 @@
+name: Mirror Stat Cards
+
+# The public github-readme-stats / activity-graph Vercel instances are
+# rate-limited and go down regularly. This job downloads each card once a day
+# and commits the SVG into assets/, so the README renders from your own repo
+# and can never show a broken image — even when the upstream service is down.
+#
+# Optional repo VARIABLES (Settings → Secrets and variables → Actions → Variables):
+#   GRS_HOST   default https://github-readme-stats.vercel.app
+#   GRAG_HOST  default https://github-readme-activity-graph.vercel.app
+# Point these at your own Vercel deploys for far better reliability.
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    env:
+      USER: ${{ github.repository_owner }}
+      GRS: ${{ vars.GRS_HOST || 'https://github-readme-stats.vercel.app' }}
+      GRAG: ${{ vars.GRAG_HOST || 'https://github-readme-activity-graph.vercel.app' }}
+      SUMMARY: https://github-profile-summary-cards.vercel.app
+      STREAK: https://streak-stats.demolab.com
+      TROPHY: https://github-profile-trophy.vercel.app
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download cards
+        run: |
+          set -uo pipefail
+          mkdir -p assets
+
+          fetch () {
+            url="$1"; out="assets/$2"
+            for attempt in 1 2 3; do
+              if curl -sfL --max-time 30 \
+                   -H 'User-Agent: Mozilla/5.0 (readme-mirror)' \
+                   "$url" -o "$out.tmp"; then
+                size=$(stat -c%s "$out.tmp" 2>/dev/null || echo 0)
+                if [ "$size" -gt 900 ] && \
+                   ! grep -qiE 'something went wrong|rate limit|couldn.t fetch|<html' "$out.tmp"; then
+                  mv "$out.tmp" "$out"
+                  echo "  OK    $2  (${size}b)"
+                  return 0
+                fi
+                echo "  retry $2  (bad payload, attempt $attempt)"
+              else
+                echo "  retry $2  (http fail, attempt $attempt)"
+              fi
+              sleep 10
+            done
+            rm -f "$out.tmp"
+            echo "  SKIP  $2  — kept previous copy"
+            return 0
+          }
+
+          C='hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12&cache_seconds=86400'
+
+          fetch "$GRS/api?username=$USER&show_icons=true&count_private=true&include_all_commits=true&custom_title=NEURAL%20OUTPUT&$C" card-stats.svg
+          fetch "$GRS/api/top-langs/?username=$USER&layout=compact&langs_count=10&custom_title=LANGUAGE%20DISTRIBUTION&$C" card-langs.svg
+          fetch "$STREAK/?user=$USER&theme=highcontrast&hide_border=true&background=0D1117&stroke=7b5cff&ring=00FFF7&fire=FF2BD1&currStreakLabel=00FFF7&sideLabels=9fb2e0&dates=6b7ba8&border_radius=12" card-streak.svg
+          fetch "$GRAG/graph?username=$USER&bg_color=0d1117&color=00fff7&line=ff2bd1&point=39ff88&area_color=7b5cff&area=true&hide_border=true&custom_title=COMMIT%20WAVEFORM" card-activity.svg
+          fetch "$TROPHY/?username=$USER&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" card-trophy.svg
+          fetch "$SUMMARY/api/cards/profile-details?username=$USER&theme=github_dark" card-summary.svg
+          fetch "$SUMMARY/api/cards/repos-per-language?username=$USER&theme=github_dark" card-lang-repos.svg
+          fetch "$SUMMARY/api/cards/most-commit-language?username=$USER&theme=github_dark" card-lang-commits.svg
+          fetch "$SUMMARY/api/cards/productive-time?username=$USER&theme=github_dark&utcOffset=5.5" card-productive.svg
+
+          echo "--- assets/ ---"
+          ls -la assets/
+
+      - name: Commit refreshed cards
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/card-*.svg
+          git diff --staged --quiet && echo "no changes" && exit 0
+          git commit -m "chore: refresh mirrored stat cards [skip ci]"
+          git push
