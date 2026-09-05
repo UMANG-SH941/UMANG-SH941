@@ -58,7 +58,7 @@ operator:
   handle:       UMANG-SH941
   designation:  Umang Shukla
   class:        Deep Learning Researcher  ✦  CS (AI & ML) Undergrad
-  home_node:    Guna, Madhya Pradesh, India
+  home_node:    Republic of India
 
 education:
   institute:    Jaypee University of Engineering & Technology, Guna
