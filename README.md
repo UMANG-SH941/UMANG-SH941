@@ -288,7 +288,7 @@ Time-series forecasting of energetic particle flux to characterize the radiation
 
 <div align="center">
 
-<a href="https://open.spotify.com/user/YOUR_SPOTIFY_ID">
+<a href="https://open.spotify.com/user/https://open.spotify.com/user/31kvapwcxg7wg5jmqchrg77ev54y?si=83bc692bc9d640d8">
   <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=YOUR_SPOTIFY_UID&cover_image=true&theme=novatorem&show_offline=true&background_color=0d1117&interchange=true&bar_color=00fff7&bar_color_cover=true" alt="Spotify now playing" width="380"/>
 </a>
 <a href="https://discord.com/users/YOUR_DISCORD_ID">
