@@ -22,7 +22,7 @@
 <br/>
 <img src="https://img.shields.io/badge/IIT%20MANDI-RESEARCH%20INTERN-39ff88?style=for-the-badge&labelColor=0d1117" alt=""/>
 <img src="https://img.shields.io/badge/IEEE%20XTREME-TOP%208%25%20GLOBAL-7b5cff?style=for-the-badge&labelColor=0d1117&logo=ieee" alt=""/>
-<img src="https://img.shields.io/badge/2C%20INDIA-UTC%2B05%3A30-00fff7?style=for-the-badge&labelColor=0d1117" alt=""/>
+<img src="https://img.shields.io/badge/%20INDIA-UTC%2B05%3A30-00fff7?style=for-the-badge&labelColor=0d1117" alt=""/>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
