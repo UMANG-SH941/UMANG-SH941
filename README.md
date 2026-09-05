@@ -208,8 +208,7 @@ motto: "When you have no legacy to inherit, you create one."
 <br/><br/>
 
 <!-- 3D ISOMETRIC CONTRIBUTION CITY -->
-<img src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output-3d/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar"/>
-
+<img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar"/>
 </div>
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
