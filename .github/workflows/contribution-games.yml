@@ -1,40 +1,52 @@
-name: Contribution Games (Snake + Pac-Man)
+name: Arcade Contribution Graphs
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # twice a day
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches: [main]
 
-permissions:
-  contents: write
-
 jobs:
-  build:
+  generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
-      # ── SNAKE ────────────────────────────────────────────────
+      # dist/ must be created by the runner user FIRST.
+      # Platane/snk runs inside Docker as root; if it creates dist/ first,
+      # the pacman action (running as the normal runner user) gets EACCES.
+      - name: Prepare output dir
+        run: |
+          mkdir -p dist
+          chmod 777 dist
+
+      # ── ARCADE: pacman + galaga + breakout (runs as runner user) ──
+      # Correct input is `games`, NOT `outputs`.
+      # Produces dist/<game>-contribution-graph.svg and -dark.svg
+      - name: Generate arcade graphs
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: 'pacman,galaga,breakout'
+
+      # ── SNAKE (runs as root in Docker — safe to go second) ──
       - name: Generate snake
         uses: Platane/snk@v3
-        id: snake
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
-            dist/snake.gif?color_snake=#00fff7&color_dots=#0d1117,#7b5cff,#ff2bd1,#39ff88,#00fff7
 
-      # ── PAC-MAN ──────────────────────────────────────────────
-      - name: Generate pac-man graph
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: dist/pacman-contribution-graph.svg
+      - name: Fix permissions and list output
+        run: |
+          sudo chmod -R a+rw dist || chmod -R a+rw dist || true
+          ls -la dist/
 
-      # ── PUBLISH ──────────────────────────────────────────────
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
