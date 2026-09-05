@@ -16,89 +16,65 @@ jobs:
     env:
       USER: ${{ github.repository_owner }}
       TOKEN: ${{ secrets.METRICS_TOKEN }}
-      BASE: ""
-      CONFIG_TIMEZONE: Asia/Kolkata
-      TEMPLATE: classic
+      TZ: Asia/Kolkata
     steps:
-      # ── ISOMETRIC CALENDAR ───────────────────────────────────
       - name: Isocalendar
         uses: lowlighter/metrics@latest
         with:
           filename: assets/metrics.isocalendar.svg
           token: ${{ env.TOKEN }}
           user: ${{ env.USER }}
-          base: ${{ env.BASE }}
-          config_timezone: ${{ env.CONFIG_TIMEZONE }}
+          base: ""
+          config_timezone: ${{ env.TZ }}
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      # ── LANGUAGES (INDEPTH) ──────────────────────────────────
       - name: Languages
         uses: lowlighter/metrics@latest
         with:
           filename: assets/metrics.languages.svg
           token: ${{ env.TOKEN }}
           user: ${{ env.USER }}
-          base: ${{ env.BASE }}
+          base: ""
           plugin_languages: yes
           plugin_languages_indepth: yes
-          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
           plugin_languages_analysis_timeout: 15
 
-      # ── CODING HABITS ────────────────────────────────────────
       - name: Habits
         uses: lowlighter/metrics@latest
         with:
           filename: assets/metrics.habits.svg
           token: ${{ env.TOKEN }}
           user: ${{ env.USER }}
-          base: ${{ env.BASE }}
-          config_timezone: ${{ env.CONFIG_TIMEZONE }}
+          base: ""
+          config_timezone: ${{ env.TZ }}
           plugin_habits: yes
           plugin_habits_from: 200
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
 
-      # ── ACHIEVEMENTS ─────────────────────────────────────────
       - name: Achievements
         uses: lowlighter/metrics@latest
         with:
           filename: assets/metrics.achievements.svg
           token: ${{ env.TOKEN }}
           user: ${{ env.USER }}
-          base: ${{ env.BASE }}
+          base: ""
           plugin_achievements: yes
           plugin_achievements_threshold: C
           plugin_achievements_secrets: yes
           plugin_achievements_display: detailed
           plugin_achievements_limit: 0
 
-      # ── STARGAZERS / STARS ───────────────────────────────────
       - name: Stars
         uses: lowlighter/metrics@latest
         with:
           filename: assets/metrics.stars.svg
           token: ${{ env.TOKEN }}
           user: ${{ env.USER }}
-          base: ${{ env.BASE }}
+          base: ""
           plugin_stargazers: yes
           plugin_stargazers_charts_type: graph
-          plugin_stars: yes
-          plugin_stars_limit: 4
-
-      # ── MUSIC (recently played) ──────────────────────────────
-      # Needs plugin_music_token — see setup notes. Delete this step if unused.
-      - name: Music
-        uses: lowlighter/metrics@latest
-        with:
-          filename: assets/metrics.music.svg
-          token: NOT_NEEDED
-          user: ${{ env.USER }}
-          base: ${{ env.BASE }}
-          plugin_music: yes
-          plugin_music_provider: spotify
-          plugin_music_mode: recent
-          plugin_music_limit: 4
-          plugin_music_token: ${{ secrets.SPOTIFY_TOKENS }}
