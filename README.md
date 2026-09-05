@@ -22,7 +22,7 @@
 <br/>
 <img src="https://img.shields.io/badge/IIT%20MANDI-RESEARCH%20INTERN-39ff88?style=for-the-badge&labelColor=0d1117" alt=""/>
 <img src="https://img.shields.io/badge/IEEE%20XTREME-TOP%208%25%20GLOBAL-7b5cff?style=for-the-badge&labelColor=0d1117&logo=ieee" alt=""/>
-<img src="https://img.shields.io/badge/%20INDIA-UTC%2B05%3A30-00fff7?style=for-the-badge&labelColor=0d1117" alt=""/>
+<img src="https://img.shields.io/badge/2C%20INDIA-UTC%2B05%3A30-00fff7?style=for-the-badge&labelColor=0d1117" alt=""/>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>
@@ -58,7 +58,7 @@ operator:
   handle:       UMANG-SH941
   designation:  Umang Shukla
   class:        Deep Learning Researcher  ✦  CS (AI & ML) Undergrad
-  home_node:    Republic of India
+  home_node:    Republic Of India
 
 education:
   institute:    Jaypee University of Engineering & Technology, Guna
@@ -138,28 +138,28 @@ motto: "When you have no legacy to inherit, you create one."
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=UMANG-SH941&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12&custom_title=NEURAL%20OUTPUT" alt="stats"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=UMANG-SH941&layout=compact&langs_count=10&hide_border=true&title_color=00fff7&text_color=9fb2e0&bg_color=0d1117&border_radius=12&custom_title=LANGUAGE%20DISTRIBUTION" alt="langs"/>
+<img height="180em" src="./assets/card-stats.svg" alt="stats"/>
+<img height="180em" src="./assets/card-langs.svg" alt="langs"/>
 
 <br/>
 
-<img src="https://streak-stats.demolab.com?user=UMANG-SH941&theme=highcontrast&hide_border=true&background=0D1117&stroke=7b5cff&ring=00FFF7&fire=FF2BD1&currStreakLabel=00FFF7&sideLabels=9fb2e0&dates=6b7ba8&border_radius=12" alt="streak"/>
+<img src="./assets/card-streak.svg" alt="streak"/>
 
 <br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=UMANG-SH941&bg_color=0d1117&color=00fff7&line=ff2bd1&point=39ff88&area_color=7b5cff&area=true&hide_border=true&custom_title=COMMIT%20WAVEFORM%20//%20LAST%2031%20CYCLES" alt="activity graph" width="100%"/>
+<img src="./assets/card-activity.svg" alt="activity graph" width="100%"/>
 
 <br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=UMANG-SH941&theme=github_dark" width="100%" alt="summary"/>
+<img src="./assets/card-summary.svg" alt="summary" width="100%"/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=UMANG-SH941&theme=github_dark" width="32%" alt=""/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=UMANG-SH941&theme=github_dark" width="32%" alt=""/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=UMANG-SH941&theme=github_dark&utcOffset=5.5" width="32%" alt=""/>
+<img src="./assets/card-lang-repos.svg" width="32%" alt="repos per language"/>
+<img src="./assets/card-lang-commits.svg" width="32%" alt="commits per language"/>
+<img src="./assets/card-productive.svg" width="32%" alt="productive time"/>
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=UMANG-SH941&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" width="100%" alt="trophies"/>
+<img src="./assets/card-trophy.svg" alt="trophies" width="100%"/>
 
 </div>
 
@@ -183,13 +183,32 @@ motto: "When you have no legacy to inherit, you create one."
 
 <br/><br/>
 
-<!-- PAC-MAN eats it too -->
-<img src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/pacman-contribution-graph.svg" width="100%" alt="pacman contribution graph"/>
+<!-- PAC-MAN eats the grid -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/pacman-contribution-graph-dark.svg"/>
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/pacman-contribution-graph.svg" width="100%"/>
+</picture>
+
+<br/><br/>
+
+<!-- GALAGA — fighter ship strafing the contribution grid -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/galaga-contribution-graph-dark.svg"/>
+  <img alt="galaga contribution graph" src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/galaga-contribution-graph.svg" width="100%"/>
+</picture>
+
+<br/><br/>
+
+<!-- BREAKOUT -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/breakout-contribution-graph-dark.svg"/>
+  <img alt="breakout contribution graph" src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/breakout-contribution-graph.svg" width="100%"/>
+</picture>
 
 <br/><br/>
 
 <!-- 3D ISOMETRIC CONTRIBUTION CITY -->
-<img src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar"/>
+<img src="https://raw.githubusercontent.com/UMANG-SH941/UMANG-SH941/output-3d/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar"/>
 
 </div>
 
@@ -215,12 +234,13 @@ motto: "When you have no legacy to inherit, you create one."
 
 <div align="center">
 
-<a href="https://github.com/UMANG-SH941/EvoSnap">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=UMANG-SH941&repo=EvoSnap&hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12" alt=""/>
-</a>
-<a href="https://github.com/UMANG-SH941/ISRO-Radiation-Forecast">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=UMANG-SH941&repo=ISRO-Radiation-Forecast&hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12" alt=""/>
-</a>
+<!--
+  PINNED REPO CARDS — uncomment once these repos exist and are public.
+  They 404 (broken image) if the repo name doesn't match exactly.
+
+  <a href="https://github.com/UMANG-SH941/EvoSnap"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UMANG-SH941&repo=EvoSnap&hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12"/></a>
+  <a href="https://github.com/UMANG-SH941/ISRO-Radiation-Forecast"><img src="https://github-readme-stats.vercel.app/api/pin/?username=UMANG-SH941&repo=ISRO-Radiation-Forecast&hide_border=true&title_color=00fff7&text_color=9fb2e0&icon_color=ff2bd1&bg_color=0d1117&border_radius=12"/></a>
+-->
 
 </div>
 
@@ -278,7 +298,8 @@ Time-series forecasting of energetic particle flux to characterize the radiation
 <br/><br/>
 
 <img src="https://leetcard.jacoblin.cool/YOUR_LEETCODE_USER?theme=dark&font=JetBrains%20Mono&ext=heatmap&border=0&radius=12" alt="LeetCode" width="49%"/>
-<img src="https://github-readme-stats.vercel.app/api/wakatime?username=YOUR_WAKATIME_USER&layout=compact&hide_border=true&title_color=00fff7&text_color=9fb2e0&bg_color=0d1117&border_radius=12&custom_title=TIME%20SPENT%20IN%20THE%20MATRIX" alt="WakaTime" width="49%"/>
+<!-- WakaTime: uncomment and set your handle once wakatime.com profile is public
+<img src="https://github-readme-stats.vercel.app/api/wakatime?username=YOUR_WAKATIME_USER&layout=compact&hide_border=true&bg_color=0d1117&border_radius=12" width="49%"/> -->
 
 <br/><br/>
 
