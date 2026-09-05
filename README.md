@@ -11,7 +11,7 @@
 <img src="./assets/hero.svg" width="100%" alt="Umang Shukla — Deep Learning Researcher"/>
 
 <a href="https://github.com/UMANG-SH941">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&pause=800&color=00FFF7&center=true&vCenter=true&width=920&height=75&lines=%3E+booting+neural+interface...;%3E+B.Tech+CSE+(AI+%26+ML)+%40+JUET+Guna+'24-'28;%3E+Research+Intern+%40+IIT+Mandi+%7C%7C+Affective+Computing;%3E+pruning+CNNs+87%25+and+keeping+the+accuracy;%3E+forecasting+radiation+for+ISRO+GEO+satellites;%3E+IEEE+Xtreme+-%3E+top+8%25+globally;%3E+ACCESS+GRANTED.+welcome%2C+operator." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&pause=800&color=00FFF7&center=true&vCenter=true&width=920&height=75&lines=%3E+booting+neural+interface...;%3E+B.Tech+CSE+(AI+%26+ML)+%40++'24-'28;%3E+Research+Intern+%40+IIT+Mandi+%7C%7C+Affective+Computing;%3E+pruning+CNNs+87%25+and+keeping+the+accuracy;%3E+forecasting+radiation+for+ISRO+GEO+satellites;%3E+IEEE+Xtreme+-%3E+top+8%25+globally;%3E+ACCESS+GRANTED.+welcome%2C+operator." alt="Typing SVG" />
 </a>
 
 <!-- ══════════ LIVE TELEMETRY ══════════ -->
