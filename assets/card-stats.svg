@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">NEURAL OUTPUT, Rank: C+</title>
-        <desc id="descId">Total Stars Earned: 0, Total Commits  : 125, Total PRs: 20, Total Issues: 2, Contributed to (last year): 4</desc>
+        <desc id="descId">Total Stars Earned: 0, Total Commits  : 130, Total PRs: 20, Total Issues: 2, Contributed to (last year): 3</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 216.074522039413;
+        stroke-dashoffset: 215.9416287756271;
       }
     }
   
@@ -177,7 +177,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >125</text>
+      >130</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -222,7 +222,7 @@
         x="219.01"
         y="12.5"
         data-testid="contribs"
-      >4</text>
+      >3</text>
     </g>
   </g>
     </svg>
